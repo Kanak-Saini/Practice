@@ -9,6 +9,7 @@
     "allowJs": true
   },
   "files": [
+    // "diag.png"
     "src/index.ts"
   ]
 }

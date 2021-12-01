@@ -358,11 +358,11 @@ loader.start((l, r) => {
         type: "moveAcceleration",
         config: {
           accel: {
-            x: 0,
-            y: 750,
+            x: 100,
+            y: 150,
           },
-          minStart: 900,
-          maxStart: 1000,
+          minStart: 50,
+          maxStart: 550,
           rotate: true,
         },
       },
@@ -388,9 +388,9 @@ loader.start((l, r) => {
         type: "rotation",
         config: {
           accel: 0,
-          minSpeed: 500,
-          maxSpeed: 7000,
-          minStart: -10,
+          minSpeed: 50,
+          maxSpeed: 700,
+          minStart: 10,
           maxStart: 0,
         },
       },
@@ -401,15 +401,15 @@ loader.start((l, r) => {
             {
               framerate: 20,
               loop: true,
-              textures: [
-              "  https://pixijs.io/particle-emitter/examples/images/pop_anim.png'"
+              textures: [ "L"
+              // "  https://pixijs.io/particle-emitter/examples/images/pop_anim.png'"
                       ],
             },
             {
               framerate: 20,
               loop: true,
-              textures: [
-               " https://pixijs.io/particle-emitter/examples/images/pop_anim.png"
+              textures: [ "L"
+              //  " https://pixijs.io/particle-emitter/examples/images/pop_anim.png"
               ],
             },
           ],
@@ -420,7 +420,7 @@ loader.start((l, r) => {
         config: {
           type: "torus",
           data: {
-            x: -750,
+            x: 900,
             y: -400,
             radius: 5,
             innerRadius: 0,
@@ -430,27 +430,28 @@ loader.start((l, r) => {
       },
     ],
   });
-  // console.log(emitter2);
-  emitter3.emit = true;
+  // // console.log(emitter2);
+  // emitter3.emit = true;
   emitter.emit = true;
-  emitter2.emit=true;
-  emitter2.rotate(1);
-  // const emitter1=emitter.rotate(1)
+  // emitter2.emit=true;
+  // emitter4.rotate(1);
+  // // const emitter1=emitter.rotate(1)
   // emitter.updateOwnerPos(window.innerWidth / 2, window.innerHeight / 2);
   // app.ticker.add((delta) => {
   //   emitter.update(delta * 0.01);
 
   // });
   app.ticker.add((delta) => {
-    emitter4.update(delta * 0.01);
-    emitter3.update(delta * 0.01);
-    emitter2.update(delta * 0.01);
+   emitter4.update(delta * 0.01);
+    // emitter3.update(delta * 0.01);
+    // emitter2.update(delta * 0.01);
     // emitter.update(delta*0.005);
   });
   // window.onclick = () => {
   //   emitter.emit = emitter.emit ? false : true;
   // };
   window.onclick = () => {
+     emitter4.emit = emitter3.emit ? false : true;
     emitter3.emit = emitter3.emit ? false : true;
     emitter2.emit = emitter2.emit ? false : true;
     emitter.emit = emitter.emit ? false : true;

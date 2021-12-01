@@ -56,6 +56,10 @@
     "url": "assets/NotoSans-Bold.fnt"
   },
   {
+    "key": "my",
+    "url": "assets/L.png"
+  },
+  {
     "key": "notoSansBlack",
     "url": "assets/NotoSans-Black.fnt"
   },
