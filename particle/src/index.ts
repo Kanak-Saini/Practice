@@ -1,18 +1,23 @@
-import { Application, Container, ParticleContainer, Graphics } from "pixi.js";
+// import { Application, Container, ParticleContainer, Graphics } from "pixi.js";
+import * as px from "pixi.js";
 import { Loader } from "./Loader";
 import { Emitter } from "./Emitter";
-const app = new Application({
+const app = new px.Application({
   width: 1500,
   height: 800,
   view: document.getElementById("my-canvas") as HTMLCanvasElement,
   backgroundColor: 0x202020,
   antialias: true,
 });
+const ima= px.Sprite.from('assets/A.png');
+app.stage.addChild(ima);
+ima.width=1000;
+ima.height=500;
 const loader = new Loader();
 loader.start((l, r) => {
   // console.log(r);
 
-  const container = new ParticleContainer(10000, {
+  const container = new px.ParticleContainer(10000, {
     scale: true,
     position: true,
     rotation: true,
